@@ -6,7 +6,8 @@ import {
   CircleDollarSign, Shield, Search, Scale, Cog,
   Heart, Edit3, LineChart, FlaskConical, Stethoscope,
   GraduationCap, Globe, BookOpen,
-  MessageSquare, Brain, Sparkles, Layout, Terminal, Bot, Image as ImageIcon
+  MessageSquare, Brain, Sparkles, Layout, Terminal, Bot, Image as ImageIcon,
+  Wind, Copy, FileText, Cpu, Brush, Video, Film, Wand2, MessageCircle
 } from 'lucide-react';
 
 export type ExperienceLevel = 'novice' | 'junior' | 'mid' | 'senior' | 'lead';
@@ -18,7 +19,7 @@ export type Domain =
   | 'healthcare' | 'education' | 'general';
 
 export type OutputMode = 'structured' | 'concise' | 'detailed' | 'json' | 'master';
-export type TargetTool = 'chatgpt' | 'claude' | 'gemini' | 'antigravity' | 'lovable' | 'v0' | 'bolt' | 'cursor' | 'copilot' | 'midjourney';
+export type TargetTool = 'chatgpt' | 'claude' | 'gemini' | 'antigravity' | 'lovable' | 'v0' | 'bolt' | 'cursor' | 'copilot' | 'devin' | 'perplexity' | 'grok' | 'mistral' | 'llama' | 'notion' | 'jasper' | 'copyai' | 'midjourney' | 'dalle' | 'leonardo' | 'firefly' | 'runway' | 'sora';
 
 export const EXPERIENCE_LEVELS: { id: ExperienceLevel; label: string; range: string; icon: React.ReactNode }[] = [
   { id: 'novice', label: 'Novice/Student', range: '0–1 yrs',  icon: <Sprout size={18} /> },
@@ -56,7 +57,12 @@ export const DOMAINS: { id: Domain; label: string; icon: React.ReactNode }[] = [
 export const TARGET_TOOLS_LABELS: Record<TargetTool, string> = {
   chatgpt: 'ChatGPT', claude: 'Claude 3', gemini: 'Gemini', 
   antigravity: 'Antigravity', lovable: 'Lovable', v0: 'v0 (Vercel)', 
-  bolt: 'Bolt.new', cursor: 'Cursor', copilot: 'GitHub Copilot', midjourney: 'Midjourney'
+  bolt: 'Bolt.new', cursor: 'Cursor', copilot: 'GitHub Copilot', 
+  devin: 'Devin AI', perplexity: 'Perplexity AI', grok: 'Grok (xAI)',
+  mistral: 'Mistral', llama: 'Llama 3', notion: 'Notion AI',
+  jasper: 'Jasper AI', copyai: 'Copy.ai', midjourney: 'Midjourney',
+  dalle: 'DALL-E 3', leonardo: 'Leonardo.ai', firefly: 'Adobe Firefly',
+  runway: 'Runway Gen-3', sora: 'Sora'
 };
 
 export const TARGET_TOOLS = [
@@ -69,7 +75,20 @@ export const TARGET_TOOLS = [
   { id: 'bolt', label: 'Bolt.new', icon: <Zap size={16} /> },
   { id: 'cursor', label: 'Cursor', icon: <Terminal size={16} /> },
   { id: 'copilot', label: 'GitHub Copilot', icon: <Bot size={16} /> },
+  { id: 'devin', label: 'Devin AI', icon: <Cpu size={16} /> },
+  { id: 'perplexity', label: 'Perplexity AI', icon: <Globe size={16} /> },
+  { id: 'grok', label: 'Grok (xAI)', icon: <MessageCircle size={16} /> },
+  { id: 'mistral', label: 'Mistral', icon: <Wind size={16} /> },
+  { id: 'llama', label: 'Llama 3', icon: <Database size={16} /> },
+  { id: 'notion', label: 'Notion AI', icon: <FileText size={16} /> },
+  { id: 'jasper', label: 'Jasper AI', icon: <PenTool size={16} /> },
+  { id: 'copyai', label: 'Copy.ai', icon: <Copy size={16} /> },
   { id: 'midjourney', label: 'Midjourney', icon: <ImageIcon size={16} /> },
+  { id: 'dalle', label: 'DALL-E 3', icon: <ImageIcon size={16} /> },
+  { id: 'leonardo', label: 'Leonardo.ai', icon: <Palette size={16} /> },
+  { id: 'firefly', label: 'Adobe Firefly', icon: <Wand2 size={16} /> },
+  { id: 'runway', label: 'Runway Gen-3', icon: <Video size={16} /> },
+  { id: 'sora', label: 'Sora', icon: <Film size={16} /> },
 ] as const;
 
 export const LEVEL_LABELS: Record<ExperienceLevel, string> = {
