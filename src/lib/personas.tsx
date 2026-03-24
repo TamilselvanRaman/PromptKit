@@ -6,7 +6,7 @@ import {
   CircleDollarSign, Shield, Search, Scale, Cog,
   Heart, Edit3, LineChart, FlaskConical, Stethoscope,
   GraduationCap, Globe, BookOpen,
-  MessageSquare, Brain, Sparkles, Layout, Terminal, Github, Image as ImageIcon
+  MessageSquare, Brain, Sparkles, Layout, Terminal, Bot, Image as ImageIcon
 } from 'lucide-react';
 
 export type ExperienceLevel = 'novice' | 'junior' | 'mid' | 'senior' | 'lead';
@@ -68,7 +68,7 @@ export const TARGET_TOOLS = [
   { id: 'v0', label: 'v0 (Vercel)', icon: <Layout size={16} /> },
   { id: 'bolt', label: 'Bolt.new', icon: <Zap size={16} /> },
   { id: 'cursor', label: 'Cursor', icon: <Terminal size={16} /> },
-  { id: 'copilot', label: 'GitHub Copilot', icon: <Github size={16} /> },
+  { id: 'copilot', label: 'GitHub Copilot', icon: <Bot size={16} /> },
   { id: 'midjourney', label: 'Midjourney', icon: <ImageIcon size={16} /> },
 ] as const;
 
